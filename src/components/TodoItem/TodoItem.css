@@ -1,0 +1,26 @@
+.todo-item {
+  border: 2px solid #cccccc;
+  margin: 10px 0;
+}
+
+.todo-item .button-container {
+  padding: 5px;
+  background-color: blue;
+  opacity: 0.3;
+}
+
+.remove-button {
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+}
+
+.mark-completed-button {
+  border: none;
+  background-color: cyan;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+}

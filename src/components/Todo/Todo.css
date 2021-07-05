@@ -1,0 +1,28 @@
+.new-todo {
+  border: 2px solid #cccccc;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.new-todo-input {
+  border: none;
+  border-bottom: 2px solid black;
+  width: 100%;
+  flex: 1;
+  margin: 10px;
+  outline: none;
+}
+
+.new-todo .button-container {
+  padding: 5px;
+  flex: 1;
+}
+
+.add-button {
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+}

@@ -12,7 +12,6 @@ logs
 .history
 node_modules
 bower_components
-dist
 
 *.sublime*
 
@@ -22,3 +21,6 @@ sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/react
 public/bundle.js
+/dist/*
+!/dist/index.html
+

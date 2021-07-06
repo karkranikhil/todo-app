@@ -6,7 +6,7 @@ import './TodoList.css';
 
 const TodoList = ({todos = [], onRemovePressed}) => (
     <div className="todo-wrapper">
-        {todos.map(todo => <TodoItem todo={todo} onRemovePressed={onRemovePressed}/>)}
+        {todos.map(todo => <TodoItem todo={todo} onRemovePressed={onRemovePressed} key={todo.text}/>)}
     </div>
 );
 

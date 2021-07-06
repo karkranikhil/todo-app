@@ -8,7 +8,7 @@ const App = () => (
     <div className="App"> 
         <h1>TODO Application </h1>
         <Todo />
-        <TodoList todos={[{text: "First Todo"}, {text: "Second Todo"}]}/>
+        <TodoList />
     </div>
 );
 

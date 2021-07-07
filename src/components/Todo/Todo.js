@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './Todo.css';
-import { createTodo } from './actions';
+import { CreateTodo } from '../../redux/actions';
 
 const Todo = ({todoList, onCreatePressed}) => {
 
@@ -20,7 +20,7 @@ const Todo = ({todoList, onCreatePressed}) => {
                     onClick={()=> {
                         const isDuplicate = todoList.some(todo => todo.text === newText)
                         if (!isDuplicate){
-                            onCreatePressed(newText);
+                            onCreatePressed({"text": newText});
                             setNewText('');
                         }
                     }}
@@ -35,6 +35,6 @@ const mapStateToProps = state => ({
     todoList: state.todosReducer
 });
 const mapDispatchToProps = dispatch => ({
-    onCreatePressed: text => dispatch(createTodo(text)),
+    onCreatePressed: text => dispatch(CreateTodo(text)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Todo);;

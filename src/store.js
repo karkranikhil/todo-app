@@ -1,5 +1,7 @@
-import {createStore, combineReducers} from 'redux';
-import {todosReducer} from './components/Todo/reducers';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import { todosReducer } from './redux/reducers';
 
 const reducers = {
     todosReducer,
@@ -7,4 +9,14 @@ const reducers = {
 
 const rootReducer = combineReducers(reducers);
 
-export const configureStore= () => createStore(rootReducer);
+// Create the redux logging middleware 
+const loggerMiddleware = createLogger()
+
+export const configureStore= (preloadedState) => createStore(
+    rootReducer, 
+    preloadedState,
+    applyMiddleware(
+        thunkMiddleware,
+        loggerMiddleware
+    )
+);

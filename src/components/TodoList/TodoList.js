@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { removeTodo } from '../Todo/actions';
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
+import { RemoveTodo } from '../../redux/actions';
 
 const TodoList = ({todos = [], onRemovePressed}) => (
     <div className="todo-wrapper">
@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
     todos: state.todosReducer
 });
 const mapDispatchToProps = dispatch => ({
-    onRemovePressed: text => dispatch(removeTodo(text)),
+    onRemovePressed: text => dispatch(RemoveTodo(text)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

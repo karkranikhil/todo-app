@@ -26,7 +26,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist/'),
         publicPath: '/dist/',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        crossOriginLoading: "use-credentials"
     },
     devServer: {
         contentBase: path.join(__dirname, 'public/'),

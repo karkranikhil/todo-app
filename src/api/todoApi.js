@@ -23,12 +23,12 @@ const getTodos = () => {
 
 //Update
 const updateTodo = todo => {
-    return HttpClient.put(`${TODO_API}/${todo.id}`, todo)
+    return HttpClient.put(`${API}/todo/${todo.id}`, todo)
 }
 
 //Delete
 const removeTodo = todo => {
-    return HttpClient.delete(`${TODO_API}/${todo._id}`)
+    return HttpClient.delete(`${API}/todo/${todo._id}`)
 }
 
 

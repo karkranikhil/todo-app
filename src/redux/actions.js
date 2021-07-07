@@ -61,10 +61,6 @@ export function GetTodoSuccess(todos){
 //Remove
 export function RemoveTodo(todo) {
     return (dispatch, getState) => {
-        dispatch({
-            type: REMOVE_TODO,
-            todo
-        })
         TodoApi.removeTodo(todo).then(res => {
             if (res.status == 204) {
                 dispatch(RemoveTodoSuccess(todo))

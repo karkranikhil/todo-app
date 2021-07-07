@@ -2,7 +2,7 @@ import * as TodoActions from "./actions";
 
 export const todosReducer = (state = [], action) => {
     
-    const { type, payload } = action;
+    const { type } = action;
 
     switch(type) {
         // case TodoActions.CREATE_TODO_SUCCESS : {
@@ -38,7 +38,7 @@ export const todosReducer = (state = [], action) => {
         }
         case TodoActions.REMOVE_TODO_SUCCESS: {
 
-            return state.filter(s => todo(s, action))
+            return state.filter(todo => todo._id !== action._id);
 
         }
         default:

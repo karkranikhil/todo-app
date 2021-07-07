@@ -30,7 +30,7 @@ export const REMOVE_TODO_ERROR = 'REMOVE_TODO_ERROR'
 export function CreateTodo(todo){
     return (dispatch, getState) => {
         return TodoApi.createTodo(todo).then(res => {
-            dispatch(CreateTodoSuccess(res.data.data))
+            dispatch(CreateTodoSuccess(res.data))
         })
     }
 }

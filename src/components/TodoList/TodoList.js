@@ -6,7 +6,7 @@ import { RemoveTodo } from '../../redux/actions';
 
 const TodoList = ({todos = [], onRemovePressed}) => (
     <div className="todo-wrapper">
-        {todos.map(todo => <TodoItem todo={todo} onRemovePressed={onRemovePressed} key={todo.text}/>)}
+        {todos.map(todo => <TodoItem todo={todo} onRemovePressed={onRemovePressed} key={todo?.text}/>)}
     </div>
 );
 

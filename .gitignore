@@ -24,3 +24,4 @@ public/bundle.js
 /dist/*
 !/dist/index.html
 
+.vscode/launch.json

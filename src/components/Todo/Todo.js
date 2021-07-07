@@ -20,7 +20,7 @@ const Todo = ({todoList, onCreatePressed}) => {
                     onClick={()=> {
                         const isDuplicate = todoList.some(todo => todo.text === newText)
                         if (!isDuplicate){
-                            onCreatePressed({"text": newText});
+                            onCreatePressed({"text": newText, "status": true});
                             setNewText('');
                         }
                     }}

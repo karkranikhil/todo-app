@@ -1,11 +1,16 @@
 // require express
 const  express = require("express");
+var cors = require('cors')
 
 //load env variables
 require('dotenv').config()
 console.log(process.env.REACT_APP_DB_USER)
 // create express app
 const  app = express();
+
+app.use(cors());
+app.use(express.urlencoded())
+app.use(express.json())
 
 // Import DB Connection
 require("./config.js");

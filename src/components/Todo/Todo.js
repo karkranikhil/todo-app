@@ -1,9 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './Todo.css';
+import { createTodo } from './actions';
 
-const Todo = () => {
+const Todo = ({todoList, onCreatePressed}) => {
 
-    const [newTodo, setNewTodo] = React.useState("");
+    const [newText, setNewText] = React.useState("");
     
     return (
         <div className="new-todo">
@@ -11,13 +13,28 @@ const Todo = () => {
                 type="text" 
                 className="new-todo-input" 
                 placeholder="Please enter your TODO description" 
-                value={newTodo}
-                onChange={e => setNewTodo(e.target.value)}/>
+                value={newText}
+                onChange={e => setNewText(e.target.value)}/>
             <div className="button-container">
-                <button className="add-button"> Create Todo </button>
+                <button 
+                    onClick={()=> {
+                        const isDuplicate = todoList.some(todo => todo.text === newText)
+                        if (!isDuplicate){
+                            onCreatePressed(newText);
+                            setNewText('');
+                        }
+                    }}
+                    className="add-button"> Create Todo 
+                </button>
             </div>
         </div>
     );
 }
 
-export default Todo;
+const mapStateToProps = state => ({
+    todoList: state.todosReducer
+});
+const mapDispatchToProps = dispatch => ({
+    onCreatePressed: text => dispatch(createTodo(text)),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);;

@@ -46,7 +46,7 @@ export function CreateTodoSuccess(todo){
 export function GetTodos(){
     return (dispatch, getState) => {
         return TodoApi.getTodos().then(res => {
-            dispatch(GetTodoSuccess(res))
+            dispatch(GetTodoSuccess(res.data))
         })
     }
 }

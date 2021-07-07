@@ -28,7 +28,7 @@ export const todosReducer = (state = [], action) => {
 
         //Read    
         case TodoActions.GET_TODOS_SUCCESS: {
-            return action.todos.data.docs || [];
+            return action.todos || [];
         }
         //Remove    
         case TodoActions.REMOVE_TODO: {

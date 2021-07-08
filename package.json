@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "client": "webpack serve --config webpack.config.js --open",
-    "build": "webpack --config webpack.config.js",
+    "build:client": "webpack --config webpack.config.js",
+    "build:server": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "concurrently \"npm run build:client\" \"npm run build:server\""
   },
   "keywords": [],
   "author": "",

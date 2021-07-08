@@ -1,8 +1,9 @@
-import {HttpClient} from './httpClient' 
+import {HttpClient} from './httpClient';
 
 // This is the API. The backend root URL can be set from here.
 
-const API = 'http://localhost:5000'
+const  port = process.env.PORT || 5000;
+const API = `http://localhost:${port}`
 
 //Setting the todos URI
 

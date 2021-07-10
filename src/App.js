@@ -6,7 +6,7 @@ import Todo from './components/Todo/Todo';
 
 const App = () => (
     <div className="App"> 
-        <h1>TODO Application </h1>
+        <h1>Organize your work</h1>
         <Todo />
         <TodoList />
     </div>

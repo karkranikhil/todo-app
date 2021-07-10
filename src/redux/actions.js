@@ -10,6 +10,11 @@ export const GET_TODOS = 'GET_TODOS'
 export const GET_TODOS_SUCCESS = 'GET_TODOS_SUCCESS' 
 export const GET_TODOS_ERROR = 'GET_TODOS_ERROR' 
 
+//Update
+export const UPDATE_TODO = 'UPDATE_TODO' 
+export const UPDATE_TODO_SUCCESS = 'UPDATE_ODO_SUCCESS' 
+export const UPDATE_TODO_ERROR = 'UPDATE_TODO_ERROR' 
+
 //Remove
 export const REMOVE_TODO = 'REMOVE_TODO';
 export const REMOVE_TODO_SUCCESS = 'REMOVE_TODO_SUCCESS' 
@@ -71,5 +76,21 @@ export function RemoveTodoSuccess(todo) {
         type: REMOVE_TODO_SUCCESS,
         todo,
         _id: todo._id
+    }
+}
+
+//update
+export function UpdateTodo(todo){
+    return (dispatch) => {
+        return TodoApi.updateTodo(todo).then(res => {
+            dispatch(UpdateTodoSuccess(res.data))
+        })
+    }
+}
+
+export function UpdateTodoSuccess(todo){
+    return {
+        type:UPDATE_TODO_SUCCESS,
+        todo
     }
 }

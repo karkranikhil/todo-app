@@ -12,7 +12,7 @@ const Todo = ({todoList, onCreatePressed}) => {
             <input 
                 type="text" 
                 className="new-todo-input" 
-                placeholder="Please enter your TODO description" 
+                placeholder="Task title" 
                 value={newText}
                 onChange={e => setNewText(e.target.value)}/>
             <div className="button-container">
@@ -24,7 +24,7 @@ const Todo = ({todoList, onCreatePressed}) => {
                             setNewText('');
                         }
                     }}
-                    className="add-button"> Create Todo 
+                    className="add-button"> Create Task 
                 </button>
             </div>
         </div>

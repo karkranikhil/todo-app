@@ -30,6 +30,12 @@ export const todosReducer = (state = [], action) => {
         case TodoActions.GET_TODOS_SUCCESS: {
             return action.todos || [];
         }
+
+        //update
+        case TodoActions.UPDATE_TODO_SUCCESS: {
+            return state.map(item=>item._id ===  action.todo._id ? {...action.todo}:{...item})
+        }  
+         
         //Remove    
         case TodoActions.REMOVE_TODO: {
 

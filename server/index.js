@@ -1,5 +1,6 @@
 // require express
 const  express = require("express");
+const path = require("path");
 var cors = require('cors')
 
 //load env variables
@@ -14,6 +15,10 @@ app.use(express.json())
 
 // Import DB Connection
 require("./config.js");
+
+//serving frontend using middlewares
+app.use(express.static(path.join(__dirname, "..", "dist")));
+app.use(express.static("public"));
 
 // Import API route
 var routes = require('./routes'); //importing route

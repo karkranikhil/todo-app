@@ -1,7 +1,7 @@
 import {HttpClient} from './httpClient';
 
 // This is the API. The backend root URL can be set from here.
-
+console.log(process.env.REACT_APP_PROD_URL);
 const  port = process.env.PORT || 5000;
 const API = process.env.REACT_APP_PROD_URL || `http://localhost:${port}`
 

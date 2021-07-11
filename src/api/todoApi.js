@@ -3,7 +3,7 @@ import {HttpClient} from './httpClient';
 // This is the API. The backend root URL can be set from here.
 
 const  port = process.env.PORT || 5000;
-const API = `http://localhost:${port}`
+const API = process.env.REACT_APP_PROD_URL || `http://localhost:${port}`
 
 //Setting the todos URI
 

@@ -1,14 +1,10 @@
 import { hot } from 'react-hot-loader';
 import React from 'react';
 import "./App.css";
-import TodoList from './components/TodoList/TodoList'
-import Todo from './components/Todo/Todo';
 
 const App = () => (
     <div className="App"> 
-        <h1>Organize your work</h1>
-        <Todo />
-        <TodoList />
+        <h1>Hurray Your App is working!!</h1>
     </div>
 );
 

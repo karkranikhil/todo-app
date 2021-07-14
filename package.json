@@ -1,7 +1,7 @@
 {
   "name": "react-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Build and Deploy CRUD App using Reactjs, MongoDB, ExpressJs, and Digital Ocean.",
   "main": "index.js",
   "scripts": {
     "client": "webpack serve --config webpack.config.js --open",
@@ -13,9 +13,9 @@
     "start":"npm run server",
     "build": "npm run build:client"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["react", "mongoose","digital ocean", "expressjs"],
+  "author": "Nikhil Karkra, Kushal Jain",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "concurrently": "^6.2.0",

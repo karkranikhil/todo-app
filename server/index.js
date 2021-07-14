@@ -5,7 +5,7 @@ var cors = require('cors')
 
 //load env variables
 require('dotenv').config()
-console.log(process.env.REACT_APP_DB_USER)
+
 // create express app
 const  app = express();
 

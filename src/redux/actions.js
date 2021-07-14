@@ -20,15 +20,6 @@ export const REMOVE_TODO = 'REMOVE_TODO';
 export const REMOVE_TODO_SUCCESS = 'REMOVE_TODO_SUCCESS' 
 export const REMOVE_TODO_ERROR = 'REMOVE_TODO_ERROR' 
 
-// export const createTodo = text => ({
-//     type: CREATE_TODO,
-//     payload: { text },
-// })
-
-// export const removeTodo = text => ({
-//     type: REMOVE_TODO,
-//     payload: { text },
-// })
 
 //Create
 //The dispatch and getstate function is provided by the Redux-Thunk middleware, we can dispatch actions with it.
